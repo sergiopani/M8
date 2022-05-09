@@ -9,6 +9,5 @@ cap01
  
 
 
-Mi proyecto va a tener dos ramas 
-+ Main => Donde se encuentra un read me
-+ Master => donde se encuentra todo el proyecto
+Mi proyecto va a tener Solo una rama
++ Main => Donde se encuentra un read me y todo el pryecto
