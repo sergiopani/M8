@@ -13,11 +13,11 @@ Antes que todo el codigo de el proyecto se encuentra en: https://github.com/serg
 > # Proyecto GIT
 Vamos a abrir nuestro IDE Eclipse para desarrolladores vamos a ir al marketplace y vamos a instalar la extension de git: 
 
-![01](Images/cap01.png)
+->![01](Images/cap01.png)<-
 
 Ahora nos vamos a ir a github y vamos a crearnos una cuenta o logearnos en una existente
-![02](Images/cap02.png)
-![04](Images/cap04.png)
+->![02](Images/cap02.png)<-
+->![04](Images/cap04.png)<-
 Hay dos formas de conextarse a un repositorio de git:
 + **HTTPS**
 + **SSH**
@@ -30,30 +30,30 @@ Vamos a consola e introducimos el siguiente comando que nos creara una phasspras
 
 Hacemos un cat del fichero donde nos ha guardado la key 
 Tambien la podemos generar mediante eclipse
-![12](Images/cap12.png)
+->![12](Images/cap12.png)<-
 
 Nos vamos a **github => Usuario => Preferencias => Private SSH KEYS**
 
 En mi caso tengo 2 agregadas ya, una para subir codigo con mi maquina ubuntu(Fedora) y la otra para subir con Windows
-![05](Images/cap05.png)
+->![05](Images/cap05.png)<-
 
 Vamos a añadir git a nuestro proyecto carta boton **derecho => share => team**
-![06](Images/cap06.png)
+->![06](Images/cap06.png)<-
 Ahora tendremos git en nuestro proyecto pero sin hacer push a github
 
 Para hacer la conexion podriamos utilizar el comando **git remote add origin "Vinculo SSH"**
 En nuestro caso eclipse ya nos lo hace solo si vamos a 
-![07](Images/cap07.png)
+->![07](Images/cap07.png)<-
 
 Ahora nos vamos a crear un repositorio en github donde vamos a subir tro proyecto carta junto con el formulario en la misma rama
-![09](Images/cap09.png)
+->![09](Images/cap09.png)<-
 Vamos a pasar todos los archivos al stage area y despues despues hacemos un commit and push
-![08](Images/cap08.png)
+->![08](Images/cap08.png)<-
 
 Se nos abrira el recuadro donde, pondremos de rama el origen que en mi caso sera la rama main
 y ponermos el **link de ssh** del repositorio que nos ofrece github
-![10](Images/cap10.png)
-![11](Images/cap11.png)
+->![10](Images/cap10.png)<-
+->![11](Images/cap11.png)<-
 
  
 
@@ -61,7 +61,7 @@ y ponermos el **link de ssh** del repositorio que nos ofrece github
 Mi proyecto va a tener Solo una rama
 + **Main** => Donde se encuentra un read me y todo el proyecto
 + **Captcha** => Donde se encuentra la version del formulario pero incluyendo el captcha
-![14](Images/cap14.png)
+->![14](Images/cap14.png)<-
 
 Vamos a crear la braca Captcha, para ello podemos ir a la consola y escribir el comando **git branch captcha** 
 
@@ -71,9 +71,9 @@ Para cambiar de rama y pasar de la main a la captcha podemos usar
 Ahora ya podemos eliminar archivos en esta rama porque no se van a modificar en la rama **main** por lo tanto no es necesario que tengamos miedo eliminar o modificar.
 
 Para poner un ejemplo ahora mismo en la rama main tenemos:
-![14](Images/cap14.png)
+->![14](Images/cap14.png)<-
 Y en la rama captcha solo tendriamos el formulario
-![15](Images/cap15.png)
+->![15](Images/cap15.png)<-
 
 **En el caso de que hicieramos un merge se juntarian los commits de las dos ramas**
 
