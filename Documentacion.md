@@ -1,6 +1,7 @@
 > ##### SERGIO PANIAGUA LÓPEZ
 
 > # Definicion de Conceptios Básicos de GIT
+Antes que todo el codigo de el proyecto se encuentra en: https://github.com/sergiopani/M8
 + **Repositorio:** es la ubicación o ruta en la que se almacena toda la información de un proyecto, cada proyectp cuenta con un unico repositorio
 + **Github:** Es un portal web que se ha creado para alojar los repositorios de un proyectos de los desarrolladores
 + **Rama:** Sirven para trabajar en una parte concreta de nuestro proyecto de forma que no afecte a la rama principal, asi podemos hacer pruebas sin miedo a equivocarnos
