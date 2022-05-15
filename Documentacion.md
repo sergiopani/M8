@@ -127,7 +127,7 @@ De momento vamos a probar si nos guarda en la base de datos el post que introduc
 ![23](Images/cap23.png)
 
 Como podemos ver si que nos ha añadido el contactoy seha guardado en la base de datos, lo podemos comprobar en el workbench realizando un select:
-![23](Images/cap24.png)
+![24](Images/cap24.png)
 
 Ahora nos faltaria implementar el formulario para que mostrase todas las cartas de un usuario
 Para ello vamos a insertar cartas en la tabla de carta, con datos random, por ejemplo:
@@ -135,3 +135,26 @@ Para ello vamos a insertar cartas en la tabla de carta, con datos random, por ej
 > ## Añadir el captcha y subirlo a nuestra nueva rama
 Antes de todo voy a realizar un commit de toda la rama main despues la voy a clonar el formulario en la rama captcha y ahi voy a realizar las modificaciones pertinentes:
 
+![25](Images/cap25.png)
+
+Como ya hemos creado nuestra rama captcha ahora podemos trabajar en ella sin miedo a perder lo que tenemos en main
+
+![26](Images/cap26.png)
+
+El codigo del captcha lo he sacado del enlace:
+https://developers.google.com/recaptcha/docs/display
+
+Asi es como quedaria puesto en la clase add.php junto al formulario:
+
+Esta es la parte que pondriamos en el head
+![27](Images/cap27.png)
+![28](Images/cap28.png)
+
+Esto es lo que pondriamos en el form:
+![29](Images/cap29.png)
+
+Nos sale un error en el captcha, ese error nos indica que estamos usando una clave recaptcha incorrecta.
+
+Por lo tanto deberiamos agregar una key a nuestra web, para ello necesitaremos google chrome y registrar nuestro dominio pero como estamos en localhost no vamos a hacerlo.
+
+> ## LISTA DE COMMITS EN GIT
