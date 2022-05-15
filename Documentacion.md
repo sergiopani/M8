@@ -174,4 +174,4 @@ Para ello me voy a crear una nueva ramma llamada Fusion donde voy a hacer alli l
 
 + git checkout -b fusion
 + Me copio lo mismo que tenia en captcha y le hago push
-+ Hago merge con la rama main
++ Hago merge con la rama main.
