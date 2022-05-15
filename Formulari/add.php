@@ -1,9 +1,16 @@
 <?php
 
-require "database.php";
+  require "database.php";
 
-$contacts = $conn->query("SELECT * FROM contacts");
+  if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $name = $_POST["name"];
+    $phoneNumber = $_POST["phone_number"];
 
+    $statement = $conn->prepare("INSERT INTO contacts (name, phone_number) VALUES ('$name', '$phoneNumber')");
+    $statement->execute();
+
+    header("Location: index.php");
+  }
 ?>
 
 <!DOCTYPE html>
@@ -54,10 +61,10 @@ $contacts = $conn->query("SELECT * FROM contacts");
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav">
           <li class="nav-item">
-            <a class="nav-link" href="#">Home</a>
+            <a class="nav-link" href="./index.php">Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="add.php">Add Contact</a>
+            <a class="nav-link" href="./add.php">Add Contact</a>
           </li>
         </ul>
       </div>
@@ -65,30 +72,38 @@ $contacts = $conn->query("SELECT * FROM contacts");
   </nav>
 
   <main>
-    <div class="container pt-4 p-3">
-      <div class="row">
-        
-        <?php if ($contacts->rowCount() == 0): ?>
-          <div class="col-md-4 mx-auto">
-            <div class="card card-body text-center">
-              <p>No contacts saved yet</p>
-              <a href="add.php">Add One!</a>
+    <div class="container pt-5">
+      <div class="row justify-content-center">
+        <div class="col-md-8">
+          <div class="card">
+            <div class="card-header">Add New Contact</div>
+            <div class="card-body">
+              <form method="POST" action="add.php">
+                <div class="mb-3 row">
+                  <label for="name" class="col-md-4 col-form-label text-md-end">Name</label>
+    
+                  <div class="col-md-6">
+                    <input id="name" type="text" class="form-control" name="name" required autocomplete="name" autofocus>
+                  </div>
+                </div>
+    
+                <div class="mb-3 row">
+                  <label for="phone_number" class="col-md-4 col-form-label text-md-end">Phone Number</label>
+    
+                  <div class="col-md-6">
+                    <input id="phone_number" type="tel" class="form-control" name="phone_number" required autocomplete="phone_number" autofocus>
+                  </div>
+                </div>
+    
+                <div class="mb-3 row">
+                  <div class="col-md-6 offset-md-4">
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                  </div>
+                </div>
+              </form>
             </div>
           </div>
-        <?php endif ?>
-        <?php foreach ($contacts as $contact): ?>
-          <div class="col-md-4 mb-3">
-            <div class="card text-center">
-              <div class="card-body">
-                <h3 class="card-title text-capitalize"><?= $contact["name"] ?></h3>
-                <p class="m-2"><?= $contact["phone_number"] ?></p>
-                <a href="#" class="btn btn-secondary mb-2">Edit Contact</a>
-                <a href="#" class="btn btn-danger mb-2">Delete Contact</a>
-              </div>
-            </div>
-          </div>
-        <?php endforeach ?>
-
+        </div>
       </div>
     </div>
   </main>

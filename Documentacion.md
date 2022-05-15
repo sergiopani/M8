@@ -78,3 +78,60 @@ Y en la rama captcha solo tendriamos el formulario
 **En el caso de que hicieramos un merge se juntarian los commits de las dos ramas**
 
 
+> ## BASE DE DATOS
+
+Antes de mostrar como se crea el formulario voy a crear la base de datos con mysql workbench
+
+Tendremos la tabla usuario y carta
+
+En la tabla carta accede el fichero JSP mientras que en la tabla usuario accede el fichero php del formulario
+
+
+![17](Images/cap17.png)
+
+La tabla **contacts** contiene los atributos:
++ **id**: Es un int que se genera automaticamente para identificar a los usuarios
++ **name**: Varchar(255) para el nombre del usuario
++ **contra**: La contraseña del usuario
+
+La tabla **carta** contiene los atributos:
++ **id**: Identifica a cada carta automaticamente
++ **nom**: varchar(50) con el nombre de la carta
++ **picture**: enlace donde se encuentra la foto del personaje de la carta
++ **race**: la raza de la carta
++ **fue, des,con,intt,sab,car,pv**: los valores de la carta
++ **contactsId**: para relacionar las dos tablas y poder saber que cartas tiene un usuario
+
+Para poder conectarnos a la base de datos por php, vamos a tener que crear un fichero de configuracion donde pondremos nuestros datos de la base de datos, el fichero que he creado es **database.php** y incluye esto:
+![19](Images/cap19.png)
+
+> ## FORMULARIO
+Para la creacion rapida de un diseño de una pagina de un formulario he usado el framework bootstrap par importar un diseño ya hecho en html:
+
+Y lo he realizado de esta manera:
+
+![18](Images/cap18.png)
+
+La pagina HOME de nuestro formulario se va a mostrar tal que asi
+![20](Images/cap20.png)
+
+Despues tenemos la pagina de add.php donde vamos a realizar la inseccion de los datos del formulario recojiendo los datos que se introducen con post
+y tambien realizando la consulta sql a la base de datos:
+
+![22](Images/cap22.png)
+
+La pagina del formulario nos quedaria tal que asi:
+
+De momento vamos a probar si nos guarda en la base de datos el post que introducimos con el usuario
+
+![23](Images/cap23.png)
+
+Como podemos ver si que nos ha añadido el contactoy seha guardado en la base de datos, lo podemos comprobar en el workbench realizando un select:
+![23](Images/cap24.png)
+
+Ahora nos faltaria implementar el formulario para que mostrase todas las cartas de un usuario
+Para ello vamos a insertar cartas en la tabla de carta, con datos random, por ejemplo:
+
+> ## Añadir el captcha y subirlo a nuestra nueva rama
+Antes de todo voy a realizar un commit de toda la rama main despues la voy a clonar el formulario en la rama captcha y ahi voy a realizar las modificaciones pertinentes:
+
