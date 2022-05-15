@@ -158,3 +158,20 @@ Nos sale un error en el captcha, ese error nos indica que estamos usando una cla
 Por lo tanto deberiamos agregar una key a nuestra web, para ello necesitaremos google chrome y registrar nuestro dominio pero como estamos en localhost no vamos a hacerlo.
 
 > ## LISTA DE COMMITS EN GIT
+
+En esta imgen podemos ver mi lista de commit de **main**:
+![30](Images/cap30.png)
+En esta imagen podemos ver mi lista de commits de **captcha**:
+![31](Images/cap31.png)
+
+Nosotros podemos entrar a cada commit y observar los cambios que tenemos en el codigo, la parte que se encuentra en verde seria el codigo cambiado,
+la parte en rojo seria el codigo eliminado y la parte sin color es que no ha cambiado nada
+
+> ## FUSIONAR LAS DOS BRANCAS
+Para fusionar las dos brancas utilizamos el comando git merge "rama activa"
+
+Para ello me voy a crear una nueva ramma llamada Fusion donde voy a hacer alli la fusion para no perder cambios
+
++ git checkout -b fusion
++ Me copio lo mismo que tenia en captcha y le hago push
++ Hago merge con la rama main
