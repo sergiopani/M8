@@ -175,3 +175,5 @@ Para ello me voy a crear una nueva ramma llamada Fusion donde voy a hacer alli l
 + git checkout -b fusion
 + Me copio lo mismo que tenia en captcha y le hago push
 + Hago merge con la rama main.
+
+Se han actualizado correctamente todos los cambios de fusion en main por lo tanto no he tenido ningun conflicto haciendo el main.
